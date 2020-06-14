@@ -1,4 +1,4 @@
-package me.kalpha.jpa.basic.member;
+package me.kalpha.datarest.member;
 
 import lombok.*;
 
@@ -19,6 +19,6 @@ public class Team {
     private Long id;
     @NotNull
     private String name;
-    @OneToMany(mappedBy = "team")
-    List<Member> members = new ArrayList<Member>();
+    @OneToMany(mappedBy = "team") //team.getMembers().addMember(member) -> case enable
+    List<Member> members = new ArrayList<>();
 }

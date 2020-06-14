@@ -1,4 +1,4 @@
-package me.kalpha.jpa.basic.member;
+package me.kalpha.datarest.member;
 
 import lombok.*;
 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>me.kalpha</groupId>
-	<artifactId>jpa.basic</artifactId>
+	<artifactId>data-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jpa.basic</name>
+	<name>data-rest</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
