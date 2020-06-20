@@ -1,10 +1,10 @@
-package me.kalpha.springconfigclient;
+package me.kalpha.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringConfigClientApplicationTests {
+class SpringConfigServerApplicationTests {
 
 	@Test
 	void contextLoads() {
