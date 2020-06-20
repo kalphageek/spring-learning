@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ConfigClientApplication implements CommandLineRunner {
-	@Value("greetings")
+	@Value("${greetings}")
 	private String greetings;
 
 	public static void main(String[] args) {
