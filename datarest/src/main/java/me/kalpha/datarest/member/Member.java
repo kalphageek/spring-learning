@@ -1,6 +1,7 @@
 package me.kalpha.datarest.member;
 
 import lombok.*;
+import org.springframework.data.redis.core.RedisHash;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -9,6 +10,7 @@ import javax.validation.constraints.NotNull;
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 @EqualsAndHashCode
+//@RedisHash("members")
 public class Member {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
