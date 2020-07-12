@@ -1,0 +1,7 @@
+// dataflow 1.2.0.RELEASE log opened at 2020-07-12 16:12:32
+app register --name product-service --type source --uri maven://me.kalpha:product-service:jar:0.0.1-SNAPSHOT
+app register --name discount-service --type processor --uri maven://me.kalpha:discount-service:jar:0.0.1-SNAPSHOT
+app register --name courier-service --type sink --uri maven://me.kalpha:courier-service:jar:0.0.1-SNAPSHOT
+app register --name product-service --type source --uri maven://me.kalpha:product-service:jar:0.0.1-SNAPSHOT
+app register --name discount-service --type processor --uri maven://me.kalpha:discount-service:jar:0.0.1-SNAPSHOT
+app register --name courier-service --type sink --uri maven://me.kalpha:courier-service:jar:0.0.1-SNAPSHOT
