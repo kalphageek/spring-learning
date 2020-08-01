@@ -1,23 +1,27 @@
-package me.kalpha.task1;
+package me.kalpha.config;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import me.kalpha.service.Task1Service;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.JobScope;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.repeat.RepeatStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Slf4j
 @RequiredArgsConstructor
 @Configuration
 public class Task1Config {
-    private final JobBuilderFactory jobBuilderFactory;
-    private final StepBuilderFactory stepBuilderFactory;
+    @Autowired
+    JobBuilderFactory jobBuilderFactory;
+    @Autowired
+    StepBuilderFactory stepBuilderFactory;
+    @Autowired
+    Task1Service task1Service;
 
     @Bean
     public Job task1Job() {
@@ -31,8 +35,7 @@ public class Task1Config {
     public Step task1Step(@Value("#{jobParameters[requestDate]}") String requestDate) {
         return stepBuilderFactory.get("task1Step")
                 .tasklet(((stepContribution, chunkContext) -> {
-                    log.info(">>>>>> This is Task1 Step");
-                    log.info(">>>>>> requestDate = {}", requestDate);
+                    task1Service.task1(requestDate);
                     return RepeatStatus.FINISHED;
                 }))
                 .build();
